@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Grok To-Do App</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🧠 Grok AI To-Do</h1>
+        </header>
+
+        <div class="task-form">
+            <form action="/add" method="POST">
+                <input type="text" name="task" placeholder="Add a task" required>
+                <button type="submit">Add Task</button>
+            </form>
+
+            <form action="/suggest" method="POST">
+                <input type="text" name="prompt" placeholder="Let Grok suggest tasks..." required>
+                <button type="submit">Suggest</button>
+            </form>
+        </div>
+
+        <div class="task-list">
+            <ul>
+                {% for task in tasks %}
+                    <li class="{{ 'done' if task.done }}">
+                        <span>{{ task.text }}</span>
+                        {% if not task.done %}
+                            <a href="/done/{{ loop.index0 }}" class="done-btn">✓</a>
+                        {% endif %}
+                    </li>
+                {% endfor %}
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

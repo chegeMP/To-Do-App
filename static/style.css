@@ -1,0 +1,103 @@
+/* General reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Arial', sans-serif;
+    background-color: #f5f5f5;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 90%;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+header h1 {
+    text-align: center;
+    font-size: 2.5rem;
+    color: #4A90E2;
+    margin-bottom: 30px;
+}
+
+/* Task Form Styling */
+.task-form {
+    margin-bottom: 30px;
+    text-align: center;
+}
+
+.task-form input[type="text"] {
+    padding: 10px;
+    width: 70%;
+    font-size: 1rem;
+    border: 2px solid #ddd;
+    border-radius: 25px;
+    margin-bottom: 10px;
+}
+
+.task-form button {
+    padding: 10px 20px;
+    font-size: 1rem;
+    background-color: #4A90E2;
+    color: #fff;
+    border: none;
+    border-radius: 25px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+.task-form button:hover {
+    background-color: #357ABD;
+}
+
+/* Task List Styling */
+.task-list ul {
+    list-style: none;
+}
+
+.task-list li {
+    padding: 15px;
+    font-size: 1.1rem;
+    border-bottom: 1px solid #ddd;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    transition: background-color 0.3s;
+}
+
+.task-list li.done {
+    background-color: #d4edda;
+    text-decoration: line-through;
+    color: #6c757d;
+}
+
+.task-list li:hover {
+    background-color: #f1f1f1;
+}
+
+.task-list a.done-btn {
+    background-color: #28a745;
+    color: white;
+    padding: 5px 10px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: bold;
+}
+
+.task-list a.done-btn:hover {
+    background-color: #218838;
+}
+
+/* Add spacing between forms */
+.task-form form {
+    margin-bottom: 15px;
+}
