@@ -6,7 +6,6 @@ from datetime import datetime
 from dotenv import load_dotenv
 
 load_dotenv()
-print("Loaded GROQ_API_KEY:", os.getenv("GROQ_API_KEY"))
 
 app = Flask(__name__)
 app.secret_key = os.getenv("SECRET_KEY", "default_secret_key")
